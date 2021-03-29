@@ -25,7 +25,8 @@ repositories {
 
 
 dependencies {
-    implementation fileTree(dir:'libs', include:'*.jar')
+    implementation fileTree(dir:'../api/build/libs', include:'*.jar')
+    implementation fileTree(dir:'../util/build/libs', include:'*.jar')
     implementation('org.springframework.boot:spring-boot-starter-actuator')
     implementation('org.springframework.boot:spring-boot-starter-webflux')
     implementation 'junit:junit:4.12'
