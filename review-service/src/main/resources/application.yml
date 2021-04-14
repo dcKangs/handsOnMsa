@@ -1,6 +1,17 @@
 server.port: 7003
 server.error.include-message: always
 
+# Strongly recommend to set this property to "none" in a production environment!
+spring.jpa.hibernate.ddl-auto: update
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/reviewdb
+    username: user
+    password: junsan
+
+spring.datasource.hikari.initializationFailTimeout: 60000
+
 logging:
   level:
     root: INFO
@@ -12,3 +23,5 @@ spring:
   config:
     activate:
       on-profile: docker
+  datasource:
+    url: jdbc:mysql://mysql/reviewdb
